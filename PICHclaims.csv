@@ -1,0 +1,63 @@
+Claim reference,Notification date,Blame Code,Vehicle Make ,PI Indicator,CH Indicator,Latest Record 
+AA387453,01/01/2021,Driver,BMW,Y,N,Y
+AA387453,01/01/2021,Driver,BMW,Y,N,N
+BB898537,24/10/2021,Both Parties,VW,Y,Y,Y
+CC710463,13/06/2021,Third Party ,Mercedes,N,Y,Y
+CD967731,15/04/2021,Third Party ,BMW,N,N,Y
+CK122356,29/03/2021,Both Parties,Skoda,N,N,Y
+CK522534,15/08/2021,Driver,Volkswagen,N,N,Y
+DD438320,28/09/2021,Both Parties,Mercedes,Y,N,Y
+EE901910,01/01/2021,Driver,Audi,N,Y,Y
+FF471941,03/02/2021,Third Party ,Volvo,N,N,Y
+FJ434943,12/01/2021,Driver,Skoda,Y,N,Y
+GE122914,12/05/2021,Driver,Mercedes Benz,N,Y,Y
+KK854853,24/10/2021,Driver,BMW,N,N,N
+KK854853,24/10/2021,Driver,BMW,Y,N,Y
+LL270668,05/01/2021,Both Parties,Toyota ,N,N,N
+LL270668,05/01/2021,Both Parties,Toyota ,N,Y,Y
+LL877944,24/10/2021,Third Party ,Vord,N,N,Y
+M459549,13/06/2021,Third Party ,Mercedes-Benz,Y,Y,Y
+MJ188919,15/09/2021,Third Party ,BMW,Y,Y,Y
+MM579339,29/03/2021,Driver,Volvo,N,Y,Y
+MN111359,15/08/2021,Both Parties,Audi,N,Y,Y
+MN763129,28/03/2021,Driver,Mercedes,N,N,Y
+PL856918,07/02/2021,Third Party ,VW,N,N,Y
+PY131223,27/03/2021,Driver,Scoda,Y,N,Y
+PY562955,27/09/2021,Driver,Ford,N,N,Y
+XY407134,01/01/2021,Driver,Toyota ,N,Y,Y
+XY720526,03/02/2021,Third Party ,Mercedes,Y,N,Y
+XY793140,24/10/2021,Third Party ,Ford,N,N,Y
+Z941689,13/06/2021,Third Party ,BMW,N,Y,Y
+ZY501363,03/02/2021,Driver,Volvo,Y,N,Y
+ZZ404561,21/05/2021,Both Parties,VW,Y,N,Y
+CP729725,13/11/2021,Driver,Mercedes,N,Y,Y
+ZZ742957,16/10/2021,Third Party ,Peugeot,N,N,Y
+PJ798988,08/07/2021,Driver,Skoda,N,Y,Y
+MM105026,17/01/2021,Driver,Volkswagen,N,Y,Y
+LL270515,01/01/2021,Driver,Mercedes,Y,N,Y
+PY493066,24/10/2021,Third Party ,Peugeot,N,N,N
+PY493066,24/10/2021,Third Party ,Peugeot,N,Y,Y
+FF208128,13/06/2021,Both Parties,Skoda,Y,N,Y
+F776894,07/07/2021,Driver,Mercedes Benz,N,N,Y
+BB647643,15/08/2021,Third Party ,BMW,N,Y,Y
+CC960488,11/09/2021,Driver,BMW,Y,Y,Y
+XY652497,01/10/2021,Driver,Peugeot,Y,N,Y
+XY652497,01/10/2021,Driver,Peugeot,N,N,N
+FF801014,05/02/2021,Both Parties,Vord,N,N,Y
+DD279981,21/08/2021,Driver,Mercedes-Benz,N,N,Y
+EE893891,29/03/2021,Third Party ,BMW,N,Y,Y
+CC468036,15/08/2021,Driver,Volvo,Y,N,Y
+C447482,28/09/2021,Driver,Ford,N,N,Y
+CK122356,29/03/2021,Both Parties,Skoda,N,N,N
+EF811402,11/09/2021,Third Party ,Toyota ,Y,N,Y
+PJ918833,25/07/2021,Third Party ,Volkswagen,N,N,Y
+EE904820,01/04/2021,Third Party ,Peugeot,N,N,Y
+FF146176,21/08/2021,Driver,Peugot,Y,N,Y
+DD103657,04/02/2021,Both Parties,Volvo,N,Y,Y
+ZZ635793,14/11/2021,Driver,Audi,N,N,Y
+E865453,03/10/2021,Third Party ,VW,Y,N,Y
+XY652497,15/08/2021,Driver,Peugeot,N,N,Y
+XY652497,28/09/2021,Both Parties,Skoda,Y,Y,N
+FF801014,03/10/2021,Third Party ,Mercedes Benz,N,N,Y
+FF146176,28/12/2021,Driver,Audi,N,N,Y
+DD103657,21/08/2021,Third Party ,VW,Y,Y,Y

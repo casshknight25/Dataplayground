@@ -1,0 +1,63 @@
+﻿Claim reference,Line of Business,Notification date,Notification Type,Claim Status,Amount incurred,Amount paid
+AA387453,Casualty,01/01/2021,Telephone,Open,"£10,975 ","£3,250 "
+AA387453,Casualty,03/02/2021,Email,Open,"£15,670 ",£0 
+BB898537,Motor,24/10/2021,Telephone,Open,"£3,789 ","£1,890 "
+CC710463,PI,13/06/2021,MOJ,Open,"£6,500 ","£3,000 "
+CD967731,Casualty,15/04/2021,Post,Open,"£237,335 ","£13,465 "
+CK122356,Motor,29/03/2021,Email,Open,"£5,678 ","£1,400 "
+CK522534,PI,15/08/2021,OIC,Open,"£2,500 ",£0 
+DD438320,Property,28/09/2021,Telephone,Open,"£47,680 ","£20,500 "
+EE901910,Property,01/01/2021,Post,Closed,"£60,800 ","£60,800 "
+FF471941,Casualty,03/02/2021,Email,Open,"£42,980 ","£22,690 "
+FJ434943,Motor,12/01/2021,Telephone,Reopened ,"£7,639 ","£5,649 "
+GE122914,PI,12/05/2021,MOJ,Open,"£7,500 ","£3,250 "
+KK854853,Casualty,24/10/2021,Post,Open,"£86,177 ","£10,000 "
+KK854853,Motor,19/01/2021,Email,Closed,"£15,847 ",£0 
+LL270668,PI,05/01/2021,OIC,Closed,"£3,750 ","£3,750 "
+LL270668,Property,03/02/2021,Post,Open,"£234,632 ","£126,750 "
+LL877944,Motor,24/10/2021,Email,Open,"£2,277 ",£0 
+M459549,PI,13/06/2021,MOJ,Open,"£10,000 ","£2,000 "
+MJ188919,Casualty,15/09/2021,Email,Open,"£284,910 ","£200,000 "
+MM579339,Casualty,29/03/2021,Telephone,Open,"£67,042 ",£0 
+MN111359,Motor,15/08/2021,Email,Closed,"£4,157 ","£4,157 "
+MN111359,Motor,28/03/2021,Telephone,Reopened ,"£3,689 ",£0 
+MN763129,PI,07/02/2021,OIC,Closed,"£4,975 ","£4,975 "
+PL856918,Property,27/03/2021,Email,Open,"£201,499 ","£67,876 "
+PY131223,Casualty,27/09/2021,Telephone,Open,"£116,539 ","£3,786 "
+PY562955,Motor,01/01/2021,Telephone,Reopened ,"£7,605 ",£0 
+XY407134,PI,03/02/2021,MOJ,Open,"£7,500 ","£4,500 "
+XY720526,Casualty,24/10/2021,Email,Open,"£133,759 ","£33,900 "
+XY793140,Motor,13/06/2021,Telephone,Open,"£15,479 ","£12,700 "
+Z941689,PI,03/02/2021,OIC,Reopened ,"£3,000 ","£1,500 "
+ZY501363,Property,21/05/2021,Post,Open,"£60,308 ","£45,000 "
+ZZ404561,Motor,13/11/2021,Email,Open,"£5,650 ","£1,882 "
+994348,Motor,16/10/2021,Telephone,Open,"£12,972 ","£6,570 "
+467835,PI,08/07/2021,MOJ,Open,"£9,500 ",£0 
+209206,Casualty,17/01/2021,Post,Closed,"£77,367 ","£45,890 "
+612116,Motor,01/01/2021,Email,Closed,"£6,235 ",£0 
+CP729725,PI,03/02/2021,MOJ,Closed,"£7,500 ","£7,500 "
+ZZ742957,Casualty,24/10/2021,Post,Open,"£86,206 ","£37,000 "
+PJ798988 ,Motor,13/06/2021,Email,Open,"£8,409 ","£6,589 "
+MM105026,PI,07/07/2021,MOJ,Open,"£7,500 ",£0 
+LL270515,Property,15/08/2021,Telephone,Open,"£37,757 ","£17,328 "
+PY493066,Motor,11/09/2021,Telephone,Reopened ,"£1,200 ",£0 
+PY493066,Casualty,01/10/2021,Email,Open,"£65,679 ","£34,000 "
+FF208128,Motor,27/11/2021,Email,Open,"£4,560 ","£1,350 "
+F776894,PI,05/02/2021,OIC,Closed,"£2,500 ","£2,500 "
+BB647643,Casualty,21/08/2021,Post,Open,"£44,599 ","£28,700 "
+CC960488,Motor,29/03/2021,Telephone,Open,"£11,514 ","£4,680 "
+XY652497,Casualty,15/08/2021,Post,Open,"£66,578 ","£38,697 "
+XY652497,Motor,28/09/2021,Email,Open,"£2,743 ",£0 
+FF801014,PI,03/10/2021,MOJ,Open,"£7,500 ",£0 
+DD279981,Property,11/09/2021,Post,Open,"£23,299 ","£18,346 "
+EE893891,Motor,25/07/2021,Email,Open,"£5,739 ","£1,200 "
+CC468036,Casualty,01/04/2021,Telephone,Open,"£255,372 ","£12,457 "
+C447482,Motor,21/08/2021,Telephone,Open,"£7,053 ","£4,687 "
+CK122356,PI,04/02/2021,OIC,Reopened ,"£3,750 ",£0 
+EF811402,Property,14/11/2021,Post,Open,"£18,627 ","£10,000 "
+PJ918833,Motor,03/10/2021,Email,Open,"£1,213 ",£235 
+EE904820,Casualty,27/11/2021,Post,Open,"£476,871 ","£235,692 "
+FF146176,Motor,28/12/2021,Telephone,Open,"£4,573 ","£3,364 "
+DD103657,PI,21/08/2021,MOJ,Open,"£12,500 ","£3,500 "
+ZZ635793,Property,03/03/2021,Email,Reopened ,"£90,574 ","£67,532 "
+E865453,Motor,19/10/2021,Telephone,Open,"£2,355 ",£675 
