@@ -25,7 +25,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.sidebar.image("/Users/casshknight/Desktop/streamlit/claimsplay/AZ.png", use_column_width=True)
+st.sidebar.image("https://github.com/casshknight25/Dataplayground/blob/main/AZ.png", use_column_width=True)
 data = st.sidebar.selectbox("Select Data Set", ("Notification Data by LOB", "Motor Claims","Broker Data"))
 st.sidebar.write("As data analysts and data scientists our roles don't just involve doing some analysis on data we have - there are several steps needed to understand and prepare the data before we can do any analysis. This app will walk you through the process of preparing data and analysing it. Select a data set to begin exploring!")
 
