@@ -25,7 +25,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.sidebar.image("https://logos-download.com/wp-content/uploads/2016/05/Allianz_logo_logotype.png", use_column_width=True)
+st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Allianz_logo.svg/2560px-Allianz_logo.svg.png", use_column_width=True)
 data = st.sidebar.selectbox("Select Data Set", ("Notification Data by LOB", "Motor Claims","Broker Data"))
 st.sidebar.write("As data analysts and data scientists our roles don't just involve doing some analysis on data we have - there are several steps needed to understand and prepare the data before we can do any analysis. This app will walk you through the process of preparing data and analysing it. Select a data set to begin exploring!")
 
