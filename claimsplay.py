@@ -444,7 +444,7 @@ if data =='Broker Data':
     if row ==['Broker Name', 'Line of Business'] and column ==['Notification Time', 'Lifecycle']:
         pivot = pd.pivot_table(df_brokers, values=['Notification Time', 'Lifecycle'], index =['Broker Name ', 'Line of Business'], aggfunc={'Notification Time':np.mean, 'Lifecycle':np.mean})
         st.write(pivot)
-    fig1 = px.box(df_brokers, x='Line of Business, y='Notification Time')
+    fig1 = px.box(df_brokers, x='Line of Business', y='Notification Time')
     st.plotly_chart(fig1, use_container_width=True)
     st.balloons()
     
