@@ -428,7 +428,8 @@ if data =='Broker Data':
             df = df.dropna()
             return df
     df_b = pd.read_csv("brokeraccount.csv")
-    df["Broker Account Number"] = df["Broker Account Number"].astype(int)
+    df_b.dropna()
+    df["Broker Account Number"] = df["Broker Account Number"].astype(float)
     df_brokers = pd.merge(df,df_b,how='left')
     st.dataframe(df_brokers)
     st.info("We are now able to complete the request - select the rows and columns to create the pivot table showing the average lifecycle and notification times split by Broker name and line of business")
@@ -443,7 +444,7 @@ if data =='Broker Data':
     if row ==['Broker Name', 'Line of Business'] and column ==['Notification Time', 'Lifecycle']:
         pivot = pd.pivot_table(df_brokers, values=['Notification Time', 'Lifecycle'], index =['Broker Name ', 'Line of Business'], aggfunc={'Notification Time':np.mean, 'Lifecycle':np.mean})
         st.write(pivot)
-    fig1 = px.box(df_brokers, x='Broker Name', y='Notification Time')
+    fig1 = px.box(df_brokers, x='Broker Name ', y='Notification Time')
     st.plotly_chart(fig1, use_container_width=True)
     st.balloons()
     
