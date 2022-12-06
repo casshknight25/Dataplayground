@@ -408,6 +408,7 @@ if data =='Broker Data':
     st.header("Data Joins")
     st.info("We have now been asked to match broker names to the account numbers in the report. Unfortunately not all data is always included in a single data set so in order to complete reports we often join 2 or more datasets together in order to incorporate all the information required for the report")
     df_b = pd.read_csv("brokeraccount.csv")
+    df["Broker Account Number"] = df["Broker Account Number"].astype(int)
     st.dataframe(df_b)
     st.info("Here we have a dataset containing the broker account numbers and the names of the Brokers these account numbers relate to - we will need to join this on to the dataset above")
     
@@ -442,6 +443,9 @@ if data =='Broker Data':
     if row ==['Broker Name', 'Line of Business'] and column ==['Notification Time', 'Lifecycle']:
         pivot = pd.pivot_table(df_brokers, values=['Notification Time', 'Lifecycle'], index =['Broker Name ', 'Line of Business'], aggfunc={'Notification Time':np.mean, 'Lifecycle':np.mean})
         st.write(pivot)
+    fig1 = px.box(df_brokers, x='Broker Name', y='Notification Time')
+    st.plotly_chart(fig1, use_container_width=True)
+    st.balloons()
     
 
 
