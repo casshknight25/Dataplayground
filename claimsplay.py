@@ -444,6 +444,7 @@ if data =='Broker Data':
     if row ==['Broker Name', 'Line of Business'] and column ==['Notification Time', 'Lifecycle']:
         pivot = pd.pivot_table(df_brokers, values=['Notification Time', 'Lifecycle'], index =['Broker Name ', 'Line of Business'], aggfunc={'Notification Time':np.mean, 'Lifecycle':np.mean})
         st.write(pivot)
+    st.info("A good way to visualise this data with be with use of a box plots. Box plots are useful tools to show the spread of a data set. The 'box' of the plot holds the middle 50% of the data set - the longer the box means the middle values of the data set are spread further apart (i.e. have a wider range of values), if the box is short it means the middle values of the data set are all quite close together. The line that divides the box is the median - this shows the middle value of the date set. The line The line below the box shows the bottom 25% of values of the date set, the line at the bottom indicates the minimum value of the data set. Likewise the line above the box shows the top 25% of the data set with the line at the top showing the maximum value of the data set.")      
     fig1 = px.box(df_brokers, x='Line of Business', y='Notification Time')
     st.plotly_chart(fig1, use_container_width=True)
     st.balloons()
