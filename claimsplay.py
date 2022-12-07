@@ -408,7 +408,7 @@ if data =='Broker Data':
     st.header("Data Joins")
     st.info("We have now been asked to match broker names to the account numbers in the report. Unfortunately not all data is always included in a single data set so in order to complete reports we often join 2 or more datasets together in order to incorporate all the information required for the report")
     df_b = pd.read_csv("brokeraccount.csv")
-    df["Broker Account Number"] = df["Broker Account Number"].astype(int)
+    df["Broker Account Number"] = df["Broker Account Number"].astype(str)
     st.dataframe(df_b)
     st.info("Here we have a dataset containing the broker account numbers and the names of the Brokers these account numbers relate to - we will need to join this on to the dataset above")
     
@@ -429,7 +429,7 @@ if data =='Broker Data':
             return df
     df_b = pd.read_csv("brokeraccount.csv")
     df_b.dropna()
-    df["Broker Account Number"] = df["Broker Account Number"].astype(str)
+    df["Broker Account Number"] = df["Broker Account Number"].astype(float)
     df_brokers = pd.merge(df,df_b,how='left')
     st.dataframe(df_brokers)
     st.info("We are now able to complete the request - select the rows and columns to create the pivot table showing the average lifecycle and notification times split by Broker name and line of business")
