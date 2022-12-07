@@ -451,7 +451,7 @@ if data =='Broker Data':
     st.plotly_chart(fig1, use_container_width=True)
     lob = df_brokers["Line of Business"].unique()
     range = st.selectbox("Which Line of Business has the biggest range of notification times?", lob)
-    if range ==['Motor']:
+    if range ==["Motor"]:
         st.success('That is correct!',icon="✅")
     else:
         st.error('Not quite, have a look at which box plot has the longest lines',icon="🚨")
