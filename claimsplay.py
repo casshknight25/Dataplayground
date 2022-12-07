@@ -429,7 +429,7 @@ if data =='Broker Data':
             return df
     df_b = pd.read_csv("brokeraccount.csv")
     df_b.dropna()
-    df["Broker Account Number"] = df["Broker Account Number"].astype(float)
+    df["Broker Account Number"] = df["Broker Account Number"].astype(float64)
     df_brokers = pd.merge(df,df_b,how='left')
     st.dataframe(df_brokers)
     st.info("We are now able to complete the request - select the rows and columns to create the pivot table showing the average lifecycle and notification times split by Broker name and line of business")
@@ -449,6 +449,7 @@ if data =='Broker Data':
     st.info("A good way to visualise this data with be with use of a box plots. Box plots are useful tools to show the spread of a data set. The 'box' of the plot holds the middle 50% of the data set - the longer the box means the middle values of the data set are spread further apart (i.e. have a wider range of values), if the box is short it means the middle values of the data set are all quite close together. The line that divides the box is the median - this shows the middle value of the date set. The line below the box shows the bottom 25% of values of the data set, the line at the bottom indicates the minimum value of the data set. Likewise the line above the box shows the top 25% of the data set with the line at the top showing the maximum value of the data set.")      
     fig1 = px.box(df_brokers, x='Line of Business', y='Notification Time')
     st.plotly_chart(fig1, use_container_width=True)
+    st.info("Box plots are also useful tools to identify unusual values within a data set - these are values that differ notably for the main set of data generally because they are either unusually large or unusually small values. These are represented as dots above or below the main plot.")   
     fig2 = px.box(df_brokers, x='Line of Business', y='Lifecycle')
     st.plotly_chart(fig2, use_container_width=True)
     if st.button("Complete Section"):
