@@ -462,8 +462,8 @@ if data =='Broker Data':
     range = st.selectbox("Which Line of Business has the biggest range of notification times?", lob)
     if range ==['Motor']:
         st.write('That is correct!')
-        else:
-            st.write('Not quite, have a look at which box plot has the longest lines')
+    else:
+        st.write('Not quite, have a look at which box plot has the longest lines')
     
     if st.button("Complete Section"):
         st.balloons()
