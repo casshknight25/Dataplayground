@@ -147,6 +147,7 @@ if data =='Notification Data by LOB':
     elif plots =="Bar" and select_column_X =="Notification Type" and st.button("Generate Plot"):
         not_bar_chart = alt.Chart(df).mark_bar().encode(alt.X("Notification Type"),y="count()", color="Line of Business")
         st.altair_chart(not_bar_chart, use_container_width=True)
+        st.success("That's correct! Both versions of the bar chart are a good way of visualising the data, take the time to look at how switching the axes changes the focus of how the data is represented then move onto the next data set', icon="✅")
 
     elif plots == "Pie" and select_column_X == "Line of Business" and st.button("Generate Plot"):
         labels = ["Motor", "Casualty", "PI", "Property"]
