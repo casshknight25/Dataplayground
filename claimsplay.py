@@ -451,19 +451,16 @@ if data =='Broker Data':
     st.plotly_chart(fig1, use_container_width=True)
     lob = df_brokers["Line of Business"].unique()
     range = st.selectbox("Which Line of Business has the biggest range of notification times?", lob)
-    if range ==['Motor']:
-        st.write('That is correct!')
-    else:
-        st.write('Not quite, have a look at which box plot has the longest lines')
+        if range ==['Motor']:
+            st.write('That is correct!')
+        else:
+            st.write('Not quite, have a look at which box plot has the longest lines')
     st.info("Box plots are also useful tools to identify unusual values within a data set - these are values that differ notably for the main set of data generally because they are either unusually large or unusually small values. These are represented as dots above or below the main plot.")   
     fig2 = px.box(df_brokers, x='Line of Business', y='Lifecycle')
     st.plotly_chart(fig2, use_container_width=True)
     lob = df_brokers["Line of Business"].unique()
     range = st.selectbox("Which Line of Business has the biggest range of notification times?", lob)
-    if range ==['Motor']:
-        st.write('That is correct!')
-    else:
-        st.write('Not quite, have a look at which box plot has the longest lines')
+  
     
     if st.button("Complete Section"):
         st.balloons()
