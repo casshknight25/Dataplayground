@@ -452,7 +452,7 @@ if data =='Broker Data':
     lob = df_brokers["Line of Business"].unique()
     range = st.selectbox("Which Line of Business has the biggest range of notification times?", lob)
     if range ==['Motor']:
-        st.success('That is correct!',icon="✅"))
+        st.success('That is correct!',icon="✅")
     else:
         st.error('Not quite, have a look at which box plot has the longest lines',icon="🚨")
     st.info("Box plots are also useful tools to identify unusual values within a data set - these are values that differ notably for the main set of data generally because they are either unusually large or unusually small values. These are represented as dots above or below the main plot.")   
