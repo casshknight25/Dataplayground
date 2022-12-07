@@ -155,6 +155,7 @@ if data =='Notification Data by LOB':
         ax1.pie(values, labels=labels, autopct='%1.1f%%',startangle=90)
         ax1.axis('equal')
         st.pyplot(fig1)
+        st.warning('This might not be the best way to represent the data, the request wanted to see the notification types across the different lines of business - have another go', icon="🚨")
 
     elif plots == "Pie" and select_column_X == "Notification Type" and st.button("Generate Plot"):
         labels = ["Email", "Telephone", "Post", "MOJ","OIC"]
@@ -163,6 +164,7 @@ if data =='Notification Data by LOB':
         ax2.pie(values, labels=labels, autopct='%1.1f%%',startangle=90)
         ax2.axis('equal')
         st.pyplot(fig2)
+        st.warning('This might not be the best way to represent the data, the request wanted to see the notification types across the different lines of business - have another go', icon="🚨")
     
 
     
