@@ -96,7 +96,7 @@ data = st.sidebar.selectbox("Select Data Set", ("Notification Data by LOB", "Mot
 st.sidebar.write("As data analysts and data scientists our roles don't just involve doing some analysis on data we have - there are several steps needed to understand and prepare the data before we can do any analysis. This app will walk you through the process of preparing data and analysing it. Select a data set to begin exploring!")
 
 if data =='Notification Data by LOB':
-    st.info("A report request has come in for a report explaining the different ways claims can be notified across the different lines of business. Click add filters to begin investigating the data"
+    st.info("A report request has come in for a report explaining the different ways claims can be notified across the different lines of business. Click add filters to begin investigating the data")
     df = pd.read_csv('claims.csv')
     st.dataframe(filter_dataframe(df))
     st.header("Data Summaries")
