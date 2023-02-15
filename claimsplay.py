@@ -24,14 +24,7 @@ st.markdown(
     ''',
     unsafe_allow_html=True
 )
-
-st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Allianz_logo.svg/2560px-Allianz_logo.svg.png", use_column_width=True)
-data = st.sidebar.selectbox("Select Data Set", ("Notification Data by LOB", "Motor Claims","Broker Data"))
-st.sidebar.write("As data analysts and data scientists our roles don't just involve doing some analysis on data we have - there are several steps needed to understand and prepare the data before we can do any analysis. This app will walk you through the process of preparing data and analysing it. Select a data set to begin exploring!")
-
-if data =='Notification Data by LOB':
-    st.info("A report request has come in for a report explaining the different ways claims can be notified across the different lines of business. Click add filters to begin investigating the data")
-    def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         modify = st.checkbox("Add filters", key="1")
 
         if not modify:
@@ -98,6 +91,12 @@ if data =='Notification Data by LOB':
 
         return df
 
+st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Allianz_logo.svg/2560px-Allianz_logo.svg.png", use_column_width=True)
+data = st.sidebar.selectbox("Select Data Set", ("Notification Data by LOB", "Motor Claims","Broker Data"))
+st.sidebar.write("As data analysts and data scientists our roles don't just involve doing some analysis on data we have - there are several steps needed to understand and prepare the data before we can do any analysis. This app will walk you through the process of preparing data and analysing it. Select a data set to begin exploring!")
+
+if data =='Notification Data by LOB':
+    st.info("A report request has come in for a report explaining the different ways claims can be notified across the different lines of business. Click add filters to begin investigating the data"
     df = pd.read_csv('claims.csv')
     st.dataframe(filter_dataframe(df))
     st.header("Data Summaries")
@@ -172,73 +171,7 @@ if data =='Notification Data by LOB':
     
     
 if data =='Motor Claims':
-    st.info("A request has come in for a report on the number of claims with PI & credit hire broken down by blame code.  Click add filters to begin investigating the data") 
-    def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-        modify = st.checkbox("Add filters", key="8")
-
-        if not modify:
-            return df
-
-        df = df.copy()
-
-
-        for col in df.columns:
-            if is_object_dtype(df[col]):
-                try:
-                    df[col] = pd.to_datetime(df[col])
-                except Exception:
-                    pass
-
-            if is_datetime64_any_dtype(df[col]):
-                df[col] = df[col].dt.tz_localize(None)
-
-        modification_container = st.container()
-
-        with modification_container:
-            to_filter_columns = st.multiselect("Filter dataframe on", df.columns)
-            for column in to_filter_columns:
-                left, right = st.columns((1, 20))
-                left.write("↳")
-        
-                if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
-                    user_cat_input = right.multiselect(
-                        f"Values for {column}",
-                        df[column].unique(),
-                        default=list(df[column].unique()),
-                    )
-                    df = df[df[column].isin(user_cat_input)]
-                elif is_numeric_dtype(df[column]):
-                    _min = float(df[column].min())
-                    _max = float(df[column].max())
-                    step = (_max - _min) / 100
-                    user_num_input = right.slider(
-                        f"Values for {column}",
-                        _min,
-                        _max,
-                        (_min, _max),
-                        step=step,
-                    )
-                    df = df[df[column].between(*user_num_input)]
-                elif is_datetime64_any_dtype(df[column]):
-                    user_date_input = right.date_input(
-                        f"Values for {column}",
-                        value=(
-                            df[column].min(),
-                            df[column].max(),
-                        ),
-                    )
-                    if len(user_date_input) == 2:
-                        user_date_input = tuple(map(pd.to_datetime, user_date_input))
-                        start_date, end_date = user_date_input
-                        df = df.loc[df[column].between(start_date, end_date)]
-                else:
-                    user_text_input = right.text_input(
-                        f"Substring or regex in {column}",
-                    )
-                    if user_text_input:
-                        df = df[df[column].str.contains(user_text_input)]
-
-        return df
+    st.info("A request has come in for a report on the number of claims with PI & credit hire broken down by blame code.  Click add filters to begin investigating the data")
 
     df = pd.read_csv('PICHclaims.csv')
     st.dataframe(filter_dataframe(df))
@@ -285,72 +218,6 @@ if data =='Motor Claims':
 
 if data =='Broker Data':
     st.info("A request has come in for a report on the lifecycle and notification time of claims across different lines of business. Click 'add filters' to begin exploring the data set") 
-    def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-        modify = st.checkbox("Add filters", key="5")
-
-        if not modify:
-            return df
-
-        df = df.copy()
-
-
-        for col in df.columns:
-            if is_object_dtype(df[col]):
-                try:
-                    df[col] = pd.to_datetime(df[col])
-                except Exception:
-                    pass
-
-            if is_datetime64_any_dtype(df[col]):
-                df[col] = df[col].dt.tz_localize(None)
-
-        modification_container = st.container()
-
-        with modification_container:
-            to_filter_columns = st.multiselect("Filter dataframe on", df.columns)
-            for column in to_filter_columns:
-                left, right = st.columns((1, 20))
-                left.write("↳")
-        
-                if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
-                    user_cat_input = right.multiselect(
-                        f"Values for {column}",
-                        df[column].unique(),
-                        default=list(df[column].unique()),
-                    )
-                    df = df[df[column].isin(user_cat_input)]
-                elif is_numeric_dtype(df[column]):
-                    _min = float(df[column].min())
-                    _max = float(df[column].max())
-                    step = (_max - _min) / 100
-                    user_num_input = right.slider(
-                        f"Values for {column}",
-                        _min,
-                        _max,
-                        (_min, _max),
-                        step=step,
-                    )
-                    df = df[df[column].between(*user_num_input)]
-                elif is_datetime64_any_dtype(df[column]):
-                    user_date_input = right.date_input(
-                        f"Values for {column}",
-                        value=(
-                            df[column].min(),
-                            df[column].max(),
-                        ),
-                    )
-                    if len(user_date_input) == 2:
-                        user_date_input = tuple(map(pd.to_datetime, user_date_input))
-                        start_date, end_date = user_date_input
-                        df = df.loc[df[column].between(start_date, end_date)]
-                else:
-                    user_text_input = right.text_input(
-                        f"Substring or regex in {column}",
-                    )
-                    if user_text_input:
-                        df = df[df[column].str.contains(user_text_input)]
-
-        return df
 
     df = pd.read_csv('broker.csv')
     st.dataframe(filter_dataframe(df))
