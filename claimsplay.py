@@ -437,20 +437,20 @@ if data =='Broker Data':
         df_brokers = pd.merge(df,df_b,how='left')
         st.dataframe(df_brokers)
     st.info("We are now able to complete the request - select the rows and columns to create the pivot table showing the average lifecycle and notification times split by Broker name and line of business")
-     def clean_df(data):
-            df = df.drop_duplicates(subset = "Claim reference")
-            df = df.astype({"Claim reference": 'str'})
-            df = df[df['Claim reference'].map(len) > 7]
-            df = df.dropna()
-            df["Broker Account Number"] = df["Broker Account Number"].replace(['PK12488'],['68623'])
-            df["Policy Number"] = df["Policy Number"].replace(['68623'],['PK12488'])
-            df.drop(df.loc[df['Broker Account Number']== 'X'].index, inplace=True)
-            df = df.dropna()
-            return df
-        df_b = pd.read_csv("brokeraccount.csv")
-        df_b.dropna()
-        df["Broker Account Number"] = df["Broker Account Number"].astype(int)
-        df_brokers = pd.merge(df,df_b,how='left')
+    def clean_df(data):
+           df = df.drop_duplicates(subset = "Claim reference")
+           df = df.astype({"Claim reference": 'str'})
+           df = df[df['Claim reference'].map(len) > 7]
+           df = df.dropna()
+           df["Broker Account Number"] = df["Broker Account Number"].replace(['PK12488'],['68623'])
+           df["Policy Number"] = df["Policy Number"].replace(['68623'],['PK12488'])
+           df.drop(df.loc[df['Broker Account Number']== 'X'].index, inplace=True)
+           df = df.dropna()
+           return df
+    df_b = pd.read_csv("brokeraccount.csv")
+    df_b.dropna()
+    df["Broker Account Number"] = df["Broker Account Number"].astype(int)
+    df_brokers = pd.merge(df,df_b,how='left')
     row = st.multiselect('Select Rows', ['Broker Account Number', 'Broker Name', 'Line of Business'], key="12")
     column = st.multiselect('Select Columns', [ 'Notification Time', 'Lifecycle'], key="13")
     if row ==['Line of Business'] and column ==['Notification Time', 'Lifecycle']:
