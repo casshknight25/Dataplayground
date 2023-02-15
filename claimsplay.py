@@ -433,7 +433,7 @@ if data =='Broker Data':
             return df
     df_b = pd.read_csv("brokeraccount.csv")
     df_b.dropna()
-    df["Broker Account Number"] = df["Broker Account Number"].astype(float)
+    df["Broker Account Number"] = df["Broker Account Number"].astype(int)
     df_brokers = pd.merge(df,df_b,how='left')
     st.dataframe(df_brokers)
     st.info("We are now able to complete the request - select the rows and columns to create the pivot table showing the average lifecycle and notification times split by Broker name and line of business")
