@@ -1,5 +1,6 @@
 
 import plotly.express as px
+import sketch
 import pandas as pd
 import numpy as np
 import altair as alt
@@ -94,7 +95,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Allianz_logo.svg/2560px-Allianz_logo.svg.png", use_column_width=True)
 data = st.sidebar.selectbox("Select Data Set", ("Notification Data by LOB", "Motor Claims","Broker Data"))
 st.sidebar.write("As data analysts and data scientists our roles don't just involve doing some analysis on data we have - there are several steps needed to understand and prepare the data before we can do any analysis. This app will walk you through the process of preparing data and analysing it. Select a data set to begin exploring!")
-
+st.sidebar.text_input("Do you need help?)
 if data =='Notification Data by LOB':
     st.info("A report request has come in for a report explaining the different ways claims can be notified across the different lines of business. Click add filters to begin investigating the data")
     df = pd.read_csv('claims.csv')
